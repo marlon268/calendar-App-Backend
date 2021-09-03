@@ -33,7 +33,7 @@ const crearUsuario = async (req, res = response) => {
 
       res.status(201).json({
          ok: true,
-         msg: user.id,
+         uid: user.id,
          name: user.name,
          token,
       });
@@ -96,6 +96,8 @@ const revalidarToken = async (req, res = response) => {
    res.json({
       ok: true,
       token,
+      uid,
+      name,
    });
 };
 
